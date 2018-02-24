@@ -1,0 +1,30 @@
+<div class="row">
+<div class="col-xs-4 navbar-text">
+
+  <% unless cart.line_items.empty? %>
+ <ul>
+<% @cart.line_items.each do |item| %>
+<div class="field">
+<%= item.quantity %> &times; <%= item.product.name %> <%= number_to_currency(item.total_price) %>
+</div>
+
+<div class="field">Total: <%= number_to_currency(@cart.total_price) %></div>
+<% end %>
+</ul>
+ <div class="col-md-4"><%= button_to 'Empty cart', @cart, method: :delete,
+data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+</div>
+
+<div class="col-md-6">
+<%= button_to "Checkout", new_order_path, method: :get, class: 'btn btn-success' %>
+</div>
+<% end %>
+</div>
+
+</div>
+
+
+
+
+
+
