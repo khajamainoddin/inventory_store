@@ -1,24 +1,9 @@
-# README
+This application is built on Ruby(2.3.0)& Rails(5.0.6), So please make sure the environment before installing the application into your machine.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Commands For Application:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+->After clone go to project directory.
+->Type 'bundle install'
+->rake db:create
+->rake db:migrate
+->
