@@ -6,4 +6,3 @@ Commands For Application:
 ->Type 'bundle install'
 ->rake db:create
 ->rake db:migrate
-->
