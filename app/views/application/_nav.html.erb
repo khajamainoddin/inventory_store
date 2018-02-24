@@ -20,7 +20,9 @@
        <ul>
 
      <% @cart.line_items.each do |item| %>
-<div><%= item.quantity %> &times; <%= item.product.name %> is added to the cart.</div>
+<div><%= item.quantity %> item added to the cart.</div>
+<div><%= button_to 'Empty cart', @cart, method: :delete,
+data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></div>
 <% end %>
 </ul>
 
