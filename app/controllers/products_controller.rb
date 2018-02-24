@@ -8,11 +8,23 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @products.to_csv }
+
+     end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+  end
+
+  def import
+    Product.import(params[:file])
+    
+    redirect_to root_url, notice: 'Products Was Successfully imported.'
   end
 
   # GET /products/new

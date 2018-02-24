@@ -12,7 +12,8 @@
     <% @products.each do |product| %>
       <tr>
         <td>
-          <%= link_to product.name, product %>
+          <%=  product.name %>
+          
         </td>
         <td>
           <%= number_to_currency product.price %>
@@ -20,11 +21,29 @@
         <td>
           <%= image_tag product.image.thumb %>
         </td>
-       
+       <td><%= link_to 'Add to Cart', product, class: 'btn btn-info' %></td>
+       <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<p>
+
+<div class="row">
+<div class="col-lg-3">
   <%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
-</p>
+</div>
+
+<br>
+<div class="col-lg-3 ">
+<%= form_tag import_products_path, multipart: true do %>
+
+  <%= file_field_tag :file %>
+
+ <br />
+
+
+  <%= submit_tag "Import Products", class: 'btn btn-md btn-danger' %>
+<% end %>
+
+</div>
+</div>

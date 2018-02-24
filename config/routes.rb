@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
  get 'products_import/new'
 
-  #resources :products_import
+  resources :products_import
   resources :products do
     collection { post :import }
   end
