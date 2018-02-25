@@ -5,4 +5,22 @@ require_relative 'application'
 Rails.application.initialize!
 
 
+<<<<<<< HEAD
 #
+=======
+#config.action_mailer.delivery_method = :smtp
+
+InventoryStore::Application.configure do
+   config.action_mailer.delivery_method = :smtp
+
+   config.action_mailer.smtp_settings = {
+   	address: "smtp.gmail.com",
+    port:    587,
+    domain: "domain.of.sender.net",
+    authentication: "plain",
+    user_name: "khajamainoddinror@gmail.com",
+    password:  "123456789",
+    enable_starttls_auto: true
+   }
+end
+>>>>>>> 30fddec289f0d62550fcd6ff7540b8a4e600cf7d
