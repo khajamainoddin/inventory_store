@@ -16,7 +16,7 @@ InventoryStore::Application.configure do
     domain: "domain.of.sender.net",
     authentication: "plain",
     user_name: "khajamainoddinror@gmail.com",
-    password:  "khaja1990@",
+    password:  "123456789",
     enable_starttls_auto: true
    }
 end
