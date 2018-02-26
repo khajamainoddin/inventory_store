@@ -26,6 +26,6 @@ production:
   reconnect: false
   database: inventory_store_production
   pool: 5
-  username: khaja
-  password: khaja123
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
   host: localhost
